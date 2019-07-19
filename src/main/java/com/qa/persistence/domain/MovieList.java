@@ -11,7 +11,7 @@ public class MovieList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String imdbId;
+	private String imdbID;
 	private String Title;
 	private Integer Year;
 	private String Genre;
@@ -23,7 +23,7 @@ public class MovieList {
 			String poster) {
 		super();
 		this.id = id;
-		this.imdbId = imdbId;
+		this.imdbID = imdbId;
 		this.Title = title;
 		this.Year = year;
 		this.Genre = genre;
@@ -45,11 +45,11 @@ public class MovieList {
 	}
 
 	public String getImdbId() {
-		return imdbId;
+		return imdbID;
 	}
 
 	public void setImdbId(String imdbId) {
-		this.imdbId = imdbId;
+		this.imdbID = imdbId;
 	}
 
 	public String getTitle() {
