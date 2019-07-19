@@ -1,6 +1,5 @@
 package com.qa.persistence.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,40 +7,33 @@ import javax.persistence.Id;
 
 @Entity
 public class MovieList {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(length = 100)
-	private Integer imdbId;
-	@Column(length = 100)
-	private String title;
-	@Column(length = 100)
-	private Integer year;
-	@Column(length = 100)
-	private String genre;
-	@Column(length = 100)
-	private String plot;
-	@Column(length = 100)
+	private String imdbId;
+	private String Title;
+	private Integer Year;
+	private String Genre;
+	private String Plot;
 	private Float imdbRating;
-	@Column(length = 100)
-	private String poster;
-	
-	public MovieList(Integer id, Integer imdbId, String title, Integer year, String genre, String plot,
-			Float imdbRating, String poster) {
+	private String Poster;
+
+	public MovieList(Integer id, String imdbId, String title, Integer year, String genre, String plot, Float imdbRating,
+			String poster) {
 		super();
 		this.id = id;
 		this.imdbId = imdbId;
-		this.title = title;
-		this.year = year;
-		this.genre = genre;
-		this.plot = plot;
+		this.Title = title;
+		this.Year = year;
+		this.Genre = genre;
+		this.Plot = plot;
 		this.imdbRating = imdbRating;
-		this.poster = poster;
+		this.Poster = poster;
 	}
-	
+
 	public MovieList() {
-		
+
 	}
 
 	public Integer getId() {
@@ -52,44 +44,44 @@ public class MovieList {
 		this.id = id;
 	}
 
-	public Integer getImdbId() {
+	public String getImdbId() {
 		return imdbId;
 	}
 
-	public void setImdbId(Integer imdbId) {
+	public void setImdbId(String imdbId) {
 		this.imdbId = imdbId;
 	}
 
 	public String getTitle() {
-		return title;
+		return Title;
 	}
 
 	public void setTitle(String title) {
-		this.title = title;
+		this.Title = title;
 	}
 
 	public Integer getYear() {
-		return year;
+		return Year;
 	}
 
 	public void setYear(Integer year) {
-		this.year = year;
+		this.Year = year;
 	}
 
 	public String getGenre() {
-		return genre;
+		return Genre;
 	}
 
 	public void setGenre(String genre) {
-		this.genre = genre;
+		this.Genre = genre;
 	}
 
 	public String getPlot() {
-		return plot;
+		return Plot;
 	}
 
 	public void setPlot(String plot) {
-		this.plot = plot;
+		this.Plot = plot;
 	}
 
 	public Float getImdbRating() {
@@ -101,17 +93,11 @@ public class MovieList {
 	}
 
 	public String getPoster() {
-		return poster;
+		return Poster;
 	}
 
 	public void setPoster(String poster) {
-		this.poster = poster;
+		this.Poster = poster;
 	}
-	
-	
-
-
-	
-	
 
 }
