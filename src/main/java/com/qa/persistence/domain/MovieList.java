@@ -15,7 +15,7 @@ public class MovieList {
 	@Column(length = 100)
 	private Integer imdbId;
 	@Column(length = 100)
-	private String Title;
+	private String title;
 	@Column(length = 100)
 	private Integer year;
 	@Column(length = 100)
@@ -23,16 +23,16 @@ public class MovieList {
 	@Column(length = 100)
 	private String plot;
 	@Column(length = 100)
-	private Integer imdbRating;
+	private Float imdbRating;
 	@Column(length = 100)
 	private String poster;
 	
 	public MovieList(Integer id, Integer imdbId, String title, Integer year, String genre, String plot,
-			Integer imdbRating, String poster) {
+			Float imdbRating, String poster) {
 		super();
 		this.id = id;
 		this.imdbId = imdbId;
-		Title = title;
+		this.title = title;
 		this.year = year;
 		this.genre = genre;
 		this.plot = plot;
@@ -61,11 +61,11 @@ public class MovieList {
 	}
 
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
 
 	public Integer getYear() {
@@ -92,11 +92,11 @@ public class MovieList {
 		this.plot = plot;
 	}
 
-	public Integer getImdbRating() {
+	public Float getImdbRating() {
 		return imdbRating;
 	}
 
-	public void setImdbRating(Integer imdbRating) {
+	public void setImdbRating(Float imdbRating) {
 		this.imdbRating = imdbRating;
 	}
 
