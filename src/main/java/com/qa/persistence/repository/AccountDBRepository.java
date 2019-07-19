@@ -36,12 +36,14 @@ public class AccountDBRepository implements AccountRepository {
 		return "SUCCESS - Account created.";
 	}
 
+	@Override
 	@Transactional(value = TxType.REQUIRED)
 	public String deleteAccount(int accountNumber) throws AccountNotFoundException {
 		this.manager.remove(this.manager.find(Account.class, accountNumber));
 		return "SUCCESS - Account deleted.";
 	}
 
+	@Override
 	@Transactional(value = TxType.REQUIRED)
 	public String updateAccount(int accountID, String account) throws AccountNotFoundException {
 		Account newAccount = this.json.getObjectForJSON(account, Account.class);
